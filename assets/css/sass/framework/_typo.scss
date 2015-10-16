@@ -1,0 +1,160 @@
+a {
+    display: inline-block;
+    color: $black;
+}
+
+p a {
+    color: $green-bright;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+p {
+    display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "dia-bold";
+    color: $black;
+}
+
+// ========================================
+// fonts style
+// ========================================
+
+.typo-uppercase {
+    text-transform: uppercase;
+}
+
+// ========================================
+// font weight
+// ========================================
+
+.typo-normal {
+    font-family: "dia-regular";
+}
+
+.typo-bold {
+    font-family: "dia-bold";
+}
+
+// ========================================
+// alignment
+// ========================================
+
+.typo-left {
+    text-align: left;
+}
+
+.typo-right {
+    text-align: right;
+}
+
+.typo-center {
+    text-align: center;
+}
+
+.typo-justify {
+    text-align: justify;
+}
+
+// ========================================
+// SIZES
+// ========================================
+
+body {
+    // letter-spacing: 0.02em;
+    font-family: "dia-regular";
+}
+
+/* */
+// ========================================
+// alt
+// ========================================
+
+// BODY
+body, h3, h4, h5, h6, p {
+    @include fontSize( $f_r );
+    @include lineHeight( $f_r + 6 );
+    @include breakpoint(mobile) {
+        @include fontSize( $f_xs );
+        @include lineHeight( $f_xs + 6 );
+    }
+}
+
+// HEADINGS
+h1, h2 {
+    @include fontSize( $f_xl );
+    @include lineHeight( $f_xl + 6 );
+    @include breakpoint(mobile) {
+        @include fontSize( $f_l );
+        @include lineHeight( $f_l + 6 );
+    }
+}
+
+// ========================================
+// colours
+// ========================================
+
+.typo-white {
+    color: $white;
+}
+
+.typo-black {
+    color: $black;
+}
+
+.typo-green-bright {
+    color: $green-bright;
+}
+
+// ========================================
+// underline
+// ========================================
+
+.typo-underline {
+    position: relative;
+    &:before {
+        position: absolute;
+        content: "";
+        top: -10px;
+        width: 20px;
+        height: 1px;
+        background-color: $black;
+    }
+}
+
+// ========================================
+// font classes
+// ========================================
+
+.f_xl {
+    @include fontSize( $f_xl );
+    @include lineHeight( $f_xl + 6 );
+}
+
+.f_l {
+    @include fontSize( $f_l  );
+    @include lineHeight( $f_l  + 6 );
+}
+
+.f_m {
+    @include fontSize( $f_m  );
+    @include lineHeight( $f_m  + 6 );
+}
+
+.f_r {
+    @include fontSize( $f_r  );
+    @include lineHeight( $f_r  + 6 );
+}
+
+.f_s {
+    @include fontSize( $f_s  );
+    @include lineHeight( $f_s  + 6 );
+}
+
+.f_xs {
+    @include fontSize( $f_xs );
+    @include lineHeight( $f_xs + 6 );
+}
