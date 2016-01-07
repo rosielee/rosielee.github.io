@@ -1,22 +1,16 @@
 a {
-    display: inline-block;
-    color: $black;
-}
-
-p a {
-    color: $green-bright;
     &:hover {
-        text-decoration: underline;
+        text-decoration: none;
     }
 }
 
-p {
-    display: inline-block;
+h1, h2, h3, h4, h5, h6 {
+    // font-family: "oswald";
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "dia-bold";
-    color: $black;
+body {
+    // color: $white;
+    // font-family: "cronospro-semibold";
 }
 
 // ========================================
@@ -25,18 +19,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .typo-uppercase {
     text-transform: uppercase;
-}
-
-// ========================================
-// font weight
-// ========================================
-
-.typo-normal {
-    font-family: "dia-regular";
-}
-
-.typo-bold {
-    font-family: "dia-bold";
 }
 
 // ========================================
@@ -60,40 +42,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // ========================================
-// SIZES
-// ========================================
-
-body {
-    // letter-spacing: 0.02em;
-    font-family: "dia-regular";
-}
-
-/* */
-// ========================================
-// alt
-// ========================================
-
-// BODY
-body, h3, h4, h5, h6, p {
-    @include fontSize( $f_r );
-    @include lineHeight( $f_r + 6 );
-    @include breakpoint(mobile) {
-        @include fontSize( $f_xs );
-        @include lineHeight( $f_xs + 6 );
-    }
-}
-
-// HEADINGS
-h1, h2 {
-    @include fontSize( $f_xl );
-    @include lineHeight( $f_xl + 6 );
-    @include breakpoint(mobile) {
-        @include fontSize( $f_l );
-        @include lineHeight( $f_l + 6 );
-    }
-}
-
-// ========================================
 // colours
 // ========================================
 
@@ -105,56 +53,67 @@ h1, h2 {
     color: $black;
 }
 
-.typo-green-bright {
-    color: $green-bright;
-}
-
-// ========================================
-// underline
-// ========================================
-
-.typo-underline {
-    position: relative;
-    &:before {
-        position: absolute;
-        content: "";
-        top: -10px;
-        width: 20px;
-        height: 1px;
-        background-color: $black;
-    }
-}
-
 // ========================================
 // font classes
 // ========================================
 
+.f_xxl {
+    font-size: 8vh;
+    line-height: 8vh;
+    @include breakpoint(mobile) {
+        // font-size: 8vh;
+        // line-height: 8vh;
+    }
+}
+
 .f_xl {
-    @include fontSize( $f_xl );
-    @include lineHeight( $f_xl + 6 );
+    font-size: 6vh;
+    line-height: 6.3vh;
+    @include breakpoint(mobile) {
+        // font-size: 8vh;
+        // line-height: 8vh;
+    }
 }
 
-.f_l {
-    @include fontSize( $f_l  );
-    @include lineHeight( $f_l  + 6 );
-}
-
-.f_m {
-    @include fontSize( $f_m  );
-    @include lineHeight( $f_m  + 6 );
-}
-
-.f_r {
-    @include fontSize( $f_r  );
-    @include lineHeight( $f_r  + 6 );
+.f_l, .f_m {
+    font-size: 2vh;
+    line-height: 2.3vh;
+    @include breakpoint(mobile) {
+        // font-size: 2.5vh;
+        // line-height: 2.8vh;
+    }
 }
 
 .f_s {
-    @include fontSize( $f_s  );
-    @include lineHeight( $f_s  + 6 );
+    font-size: 1.5vh;
+    line-height: 1.8vh;
+    @include breakpoint(mobile) {
+        // font-size: 1.5vh;
+        // line-height: 1.8vh;
+    }
 }
 
-.f_xs {
-    @include fontSize( $f_xs );
-    @include lineHeight( $f_xs + 6 );
+// ========================================
+// SIZES
+// ========================================
+
+body {
+    @extend .f_m;
+}
+
+.h1, h1 {
+    @extend .f_xxl;
+}
+
+.h2, h2 {
+    @extend .f_l;
+}
+
+.h3, h3 {
+    @extend .f_l;
+    margin: 1vh 0px;
+}
+
+.typo-underline {
+    text-decoration: underline;
 }

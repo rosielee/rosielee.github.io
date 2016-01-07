@@ -1,63 +1,9 @@
-// ================================================
-// WordPress WYSIWYG
-// ================================================
-
-.wysiwyg a {
-    text-decoration: underline;
-}
-
-// full width
-.alignnone {
-    width: 100%;
-    padding: 10px 0;
-}
-
-.alignleft {
-    float: left;
-    width: 50%;
-    padding: 10px 10px 10px 0px;
-}
-
-.alignright {
-    float: right;
-    width: 50%;
-    padding: 10px 0px 10px 10px;
-}
-
-.aligncenter {
-    margin: 0 auto;
-    padding: 10px 0;
-    display: block;
-}
-
-.alignnone,
-.alignleft,
-.alignright,
-.aligncenter {
-    height: initial;
-}
-
-.alignleft,
-.alignright {
-    @include breakpoint(mini-mobile) {
-        width: 100%;
-        padding: 0px 0 10px 0;
-    }
-}
-
-// .width-half {
-//     width: 50%;
-//     @include breakpoint(mini-mobile) {
-//         width: 100%;
-//     }
-// }
-
 // ========================================
-// classes for john to use
+// hide
 // ========================================
 
-.text {
-    padding: 0 10px 10px 10px;
+.invisible {
+    opacity: 0;
 }
 
 // ================================================
@@ -229,14 +175,6 @@
     position:static;
     width:auto;
     margin:0;
-}
-
-// ================================================
-// hide: visually from all + maintain layout
-// ================================================
-
-.invisible {
-    visibility:hidden;
 }
 
 // ================================================
