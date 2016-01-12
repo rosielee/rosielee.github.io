@@ -1,0 +1,155 @@
+@import "mixins";
+
+// ========================================
+// colours
+// ========================================
+
+$purple: #604288;
+$red: #FF2901;
+$yellow: #FFDE03;
+
+// ========================================
+// sizes
+// ========================================
+
+$width : 250px;
+$height : 354px;
+$height_small : 74px;
+$explode : 400px;
+
+
+* {
+    transition: 300ms;
+}
+
+.coords {
+    position: relative;
+    width: 80%;
+    margin: 0px auto;
+    height: 30px;
+    border: 1px solid black;
+    background-color: #CCC;
+}
+
+.stage {
+    perspective: 700px;
+    perspective-origin: 50% 50%;
+    display: block;
+    position: relative;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    margin: 20px 0px 0px -300px;
+}
+
+.box {
+    // transform: rotate3d(1,0,0,-40deg);
+    @include prefix( transform, rotateX(0deg) rotateY(0deg) );
+    @include prefix( transform-style, preserve-3d );
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: $width;
+    height: 355px;
+}
+
+.panel {
+    margin-top: -177px;
+    margin-left: -117px;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    // transform-style: flat;
+}
+
+.front {
+    width: $width;
+    height: $height;
+    background-color: $red;
+    @include prefix( transform, translate3d(0px, 0px, $height_small / 2) );
+}
+
+.back {
+    width: $width;
+    height: $height;
+    background-color: $red;
+    @include prefix( transform, rotateY(180deg) translate3d(0px, 0px, $height_small / 2) );
+}
+
+.top {
+    width: $width;
+    height: $height_small;
+    background-color: $yellow;
+    @include prefix( transform, rotateX(90deg) translate3d(0px, 0px, $height_small / 2) );
+}
+
+.bottom {
+    width: $width;
+    height: $height_small;
+    background-color: $yellow;
+    @include prefix( transform, rotateX(-90deg) translate3d(0px, 0px, 317px) );
+}
+
+.left {
+    width: $height_small;
+    height: $height;
+    background-color: $purple;
+    @include prefix( transform, rotateY(-90deg) translate3d(0px, 0px, $height_small / 2) );
+}
+
+.right {
+    width: $height_small;
+    height: $height;
+    background-color: $purple;
+    @include prefix( transform, rotateY(90deg) translate3d(0px, 0px, 213px) );
+}
+
+// ========================================
+// explode
+// ========================================
+
+.explode {
+    .top {
+        @include prefix( transform, rotateX(90deg) translate3d(0px, 0px, $explode + $height_small / 2) );
+    }
+    .bottom {
+        @include prefix( transform, rotateX(-90deg) translate3d(0px, 0px, $explode + 317px) );
+    }
+    .left {
+        @include prefix( transform, rotateY(-90deg) translate3d(0px, 0px, $explode + 37) );
+    }
+    .right {
+        @include prefix( transform, rotateY(90deg) translate3d(0px, 0px, $explode + 213) );
+    }
+    .front {
+        @include prefix( transform, rotateY(0deg) translate3d(0px, 0px, $explode + $height_small / 2) );
+    }
+    .back {
+        @include prefix( transform, rotateY(180deg) translate3d(0px, 0px, $explode + $height_small / 2) );
+    }
+}
+
+// ========================================
+// rotate
+// ========================================
+
+// animation-name, rotate );
+// animation-duration, 6000ms );
+// animation-timing-function, linear ); // cubic-bezier(0, 0.9, 0.32, 1.04)
+// animation-fill-mode, forwards );
+// animation-delay, initial );
+// animation-iteration-count, infinite );
+// animation-direction, initial );
+// animation-play-state, initial );
+
+
+@include keyframes(rotate) {
+    0%   { @include prefix (transform, rotateX(0deg  ) rotateY(360deg) ); }
+    100% { @include prefix (transform, rotateX(360deg) rotateY(0deg) ); }
+}
+
+.rotate {
+    @include prefix(animation, rotate 6000ms linear infinite);
+}

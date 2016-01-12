@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>ordem</title>
+    <link rel='stylesheet' type='text/css' href='css/compiled/box.css'>
+</head>
+<body>
+
+<section>
+    <h3 style="font-family: monospace;">click anywhere to explode</h3>
+</section>
+
+<section class="stage">
+    <article class="box rotate">
+        <section class="panel front"></section>
+        <section class="panel top"></section>
+        <section class="panel bottom"></section>
+        <section class="panel back"></section>
+        <section class="panel left"></section>
+        <section class="panel right"></section>
+    </article>
+</section>
+
+<script>
+document.addEventListener('click', function() {
+    document.querySelector('.box').classList.toggle('explode');
+});
+</script>
+</body>
+</html>
