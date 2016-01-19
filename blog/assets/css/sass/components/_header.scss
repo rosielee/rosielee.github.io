@@ -1,0 +1,31 @@
+.header {
+    position: fixed;
+    width: 100%;
+}
+
+.header-inner {
+}
+
+.nav {
+    @extend .bg-blue-tint;
+    width: 150px;
+    position: fixed;
+    left: 0;
+    top: 64px;
+    height: 100%;
+}
+
+.main {
+    padding-left: 150px;
+    padding-top: 80px;
+}
+
+.card {
+    @extend .bg-grey-one;
+    &:hover {
+        @extend .bg-grey-two;
+    }
+    a {
+        display: block;
+    }
+}

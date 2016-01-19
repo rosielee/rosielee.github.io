@@ -1,0 +1,84 @@
+$blue           : #8CC3C8;
+$blue-tint      : #D6E6E9;
+$green          : #B4DC9B;
+$green-tint     : #C7E9D3;
+$darkgreen      : #70C791;
+$yellow         : #FFDC96;
+$yellow-tint    : #FFE6B4;
+$white          : #FFFFFF;
+$offwhite       : #E1DCD2;
+$grey-one       : #E5E5E5;
+$grey-two       : #CCCCCC;
+$grey-three     : #B3B3B3;
+$grey-four      : #9C9C9C;
+$grey-five      : #7F7F7F;
+$grey-six       : #666666;
+$grey-seven     : #4D4D4D;
+$grey-eight     : #333333;
+$grey-nine      : #1A1A1A;
+$black          : #000000;
+$black-trans    : rgba(0,0,0, 0.6);
+$white-trans    : rgba(255,255,255, 0.6);
+$green-trans    : rgba(112,199,145, 0.7);
+$alert          : #FFCCCC;
+$success        : #FFDC96;
+
+// ========================================
+// background
+// ========================================
+
+.bg-blue            { background-color: $blue; }
+.bg-blue-tint       { background-color: $blue-tint; }
+.bg-green           { background-color: $green; }
+.bg-green-tint      { background-color: $green-tint; }
+.bg-darkgreen       { background-color: $darkgreen; }
+.bg-yellow          { background-color: $yellow; }
+.bg-yellow-tint     { background-color: $yellow-tint; }
+.bg-white           { background-color: $white; }
+.bg-offwhite        { background-color: $offwhite; }
+.bg-grey-one        { background-color: $grey-one; }
+.bg-grey-two        { background-color: $grey-two; }
+.bg-grey-three      { background-color: $grey-three; }
+.bg-grey-four       { background-color: $grey-four; }
+.bg-grey-five       { background-color: $grey-five; }
+.bg-grey-six        { background-color: $grey-six; }
+.bg-grey-seven      { background-color: $grey-seven; }
+.bg-grey-eight      { background-color: $grey-eight; }
+.bg-grey-nine       { background-color: $grey-nine; }
+.bg-black           { background-color: $black; }
+.bg-black-trans     { background-color: $black-trans; }
+.bg-white-trans     { background-color: $white-trans; }
+.bg-green-trans     { background-color: $green-trans; }
+body .bg-alert          { background-color: $alert; }
+.bg-success         { background-color: $success; }
+
+.bg-none            { background-color: none !important; }
+
+// ========================================
+// fonts
+// ========================================
+
+.typo-blue { color: $blue; }
+.typo-blue-tint { color: $blue-tint; }
+.typo-green { color: $green; }
+.typo-green-tint { color: $green-tint; }
+.typo-darkgreen { color: $darkgreen; }
+.typo-yellow { color: $yellow; }
+.typo-yellow-tint { color: $yellow-tint; }
+.typo-white { color: $white; }
+.typo-offwhite { color: $offwhite; }
+.typo-grey-one { color: $grey-one; }
+.typo-grey-two { color: $grey-two; }
+.typo-grey-three { color: $grey-three; }
+.typo-grey-four { color: $grey-four; }
+.typo-grey-five { color: $grey-five; }
+.typo-grey-six { color: $grey-six; }
+.typo-grey-seven { color: $grey-seven; }
+.typo-grey-eight { color: $grey-eight; }
+.typo-grey-nine { color: $grey-nine; }
+.typo-black { color: $black; }
+.typo-black-trans { color: $black-trans; }
+.typo-white-trans { color: $white-trans; }
+.typo-green-trans { color: $green-trans; }
+.typo-alert { color: $alert; }
+.typo-success { color: $success; }

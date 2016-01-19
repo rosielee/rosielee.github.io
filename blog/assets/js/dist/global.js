@@ -27,10 +27,10 @@ var global = (function($) {
         }
 
         // clear container
-        $('#base > div').html('');
+        $('body > div').html('');
 
         // check is page is valid
-        var pages = ['home', 'list', 'single'];
+        var pages = ['home'];
         if ( pages.indexOf(hash) == -1 ) { hash = '404' }
 
         // load core templates
