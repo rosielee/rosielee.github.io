@@ -29,3 +29,9 @@
         display: block;
     }
 }
+
+.search {
+    input {
+        @include prefix( appearance, none );
+    }
+}
