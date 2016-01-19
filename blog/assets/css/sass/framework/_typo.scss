@@ -1,0 +1,118 @@
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+// ========================================
+// fonts style
+// ========================================
+
+.typo-uppercase {
+    text-transform: uppercase;
+}
+
+// ========================================
+// alignment
+// ========================================
+
+.typo-left {
+    text-align: left;
+}
+
+.typo-right {
+    text-align: right;
+}
+
+.typo-center {
+    text-align: center;
+}
+
+.typo-justify {
+    text-align: justify;
+}
+
+// ========================================
+// colours
+// ========================================
+
+.typo-white {
+    color: $white;
+}
+
+.typo-black {
+    color: $black;
+}
+
+// ========================================
+// font classes
+// ========================================
+
+.f_xl {
+    font-size: 28px;
+    line-height: 34px;
+    // @include breakpoint(mobile) {}
+}
+
+.f_l {
+    font-size: 22px;
+    line-height: 28px;
+    // @include breakpoint(mobile) {}
+}
+
+.f_m {
+    font-size: 18px;
+    line-height: 24px;
+    // @include breakpoint(mobile) {}
+}
+
+.f_r {
+    font-size: 14px;
+    line-height: 20px;
+    // @include breakpoint(mobile) {}
+}
+
+.f_s {
+    font-size: 12px;
+    line-height: 18px;
+    // @include breakpoint(mobile) {}
+}
+
+// ========================================
+// SIZES
+// ========================================
+
+body {
+    @extend .f_m;
+}
+
+.h1, h1 {
+    @extend .f_xl;
+}
+
+.h2, h2 {
+    @extend .f_l;
+}
+
+.h3, h3 {
+    @extend .f_m;
+}
+
+.h4, h4,
+.h5, h5,
+.h6, h6 {
+    @extend .f_r;
+}
+
+.typo-underline {
+    text-decoration: underline;
+}
