@@ -1,34 +1,122 @@
 // ========================================
-// nav
+// nav ☰
 // ========================================
+
 .navwrap {
-	padding: 2%;
+	padding: 2% 0 1% 2.5%;
+	
+	@include breakpoint(mobile) {	
+		// position: fixed;
+	}	
 }
 
 .logowrap {
 
 	img {
-		width: 90px;
+		width: 100px;
 	}
 }
 
-nav {
-	margin: 70px 0 18px 0;
+nav {	
+	margin: 70px 0 0 0;
 	color: rgb(80,80,80);
+	font-size: 12px;	
 	
 	a {
 		display: block;
 		padding: 8px 0;
 	}
 
+	// &.some-class {
+	// 	@include breakpoint(mobile) {
+	// 		outline: 10px solid pink;
+	// 	}		
+	// }
+
 	@include breakpoint(mobile) {
-		background: pink;
+		// background: pink;
+		margin: 10px 0 0 0;	
+		font-size: 14px;
+		display: none;
+
+		a {
+			border-bottom: 1px solid rgb(220,220,220);	
+			padding: 15px 0;
+		}		
 	}
 }
+
+// .logowrap {
+// 	&.some-class {
+// 		outline: 10px solid black;
+// 	}
+// }
+	
+// aded to parent (i.e body)
+.mobilenav {
+	@include breakpoint(mobile) {
+		nav {
+			display: block;
+		}
+		.logowrap {
+		}
+	}
+}
+
+.burger {
+		display: inline-block;
+		position: absolute;
+		right: 3%;
+		font-size: 30px;
+		padding-top: 2px;	
+
+	span {
+		color: black;
+		display: none;
+
+		@include breakpoint(mobile) {
+		display: inline-block;		
+		}
+	}
+	
+}
+
 
 .navline {
 	border-bottom: solid 1px rgb(220,220,220);
 	width: 28px;
+	margin: 18px 0;
+
+	@include breakpoint(mobile) {
+	display: none;		
+	}
 }
 
+.navsocial {
+	margin: 28px 0;
 
+	@include breakpoint(mobile) {	
+		margin: 25px 0 20px 0;	
+		}
+	
+	a {
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		margin-right: 10px;
+		padding: 0;
+
+		@include breakpoint(mobile) {
+		width: 23px;
+		height: 23px;	
+		border-bottom: none;	
+		}
+	}
+
+	a img {
+		width: 100%;
+		height: auto;
+	}
+
+	
+}

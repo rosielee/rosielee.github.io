@@ -7,10 +7,12 @@
 
 <link rel="stylesheet" href="assets/css/compiled/style.css" type="text/css" />
     <!--[if lt IE 9]>
-8
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
-9
     <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- js -->
 
     </head>
 
@@ -21,16 +23,25 @@
 
         <div class="unit size1of7 tablet1of4 mini1of3 mobile1of1 typo-left navwrap">
 
-            <div class="logowrap mvm"><a><img src="assets/img/logo.png" alt="Rosie Lees Logo"></a></div>
+            <div class="logowrap mvm"><a><img src="assets/img/logo.png" alt="Rosie Lees Logo"></a><div class="burger"><span class="burger">☰</span></div></div>
 
-            <nav class="f_s">
+
+            <nav>
                 <a><b>HOME</a>
                 <a>FILTER</a>
                 <a>BUTTONS</a>
                 <a>HERE</b></a>
-            </nav>
 
             <div class="navline"></div>
+
+            <div class="navsocial">
+            	<a><img src="assets/img/socialicons/facebookicon.svg" alt="Facebook Icon"></a>
+            	<a><img src="assets/img/socialicons/twittericon.svg" alt="Twitter Icon"></a>
+            	<a><img src="assets/img/socialicons/googleplusicon.svg" alt="Google + Icon"></a>
+            	<a><img src="assets/img/socialicons/giticon.svg" alt="GitHub Icon"></a>
+            </div>
+
+            </nav>
 
         </div>    
 
@@ -75,11 +86,13 @@
 
 
 
-
-
-
-
-
+<script>
+$(document).ready(function(){
+    $("span").click(function(){
+        $("body").toggleClass('mobilenav');
+    }); 
+});
+</script>
 
     </body>
 
