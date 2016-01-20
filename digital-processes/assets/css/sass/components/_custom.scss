@@ -1,0 +1,75 @@
+// ========================================
+// custom
+// ========================================
+
+body{
+    background-color: $grey;
+}
+
+.title {
+    h1 {
+        font-size: 2em;
+        font-weight: 200;
+        line-height: 95%;
+    }
+
+    p {
+        font-size: .9em;
+        font-weight: 100;
+        line-height: 140%;
+        color: $typegrey;
+    }
+}
+
+.box-item {
+    background-color: white;
+    border: solid 1px $grey;
+}
+
+.item-title, .item-link {
+    font-weight: 100;
+    line-height: 150%;
+}
+
+.item-title {
+    font-size: 1.5em;
+}
+
+.item-link {
+    color: $blue;
+    font-size: 1em;
+    a {
+        display: inline-block;
+        width: 22px;
+        height: 18px;
+        background: url(../../img/link.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+.item-instructions {
+    color: $typegrey;
+    font-style: italic;
+    font-size: .8em;
+    b {
+        font-style: normal;
+    }
+    li {
+        list-style-type: circle;
+        list-style-position: inside;
+        b {
+            color: $blue;
+            font-style: italic;
+        }
+    }
+}
+
+.ams {
+    display: inline-block;
+    width: 16px;
+    height: 10px;
+    background: url(../../img/flag_netherlands.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
