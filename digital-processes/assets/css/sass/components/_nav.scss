@@ -1,0 +1,70 @@
+// ========================================
+// navigation
+// ========================================
+
+.navwrap {
+    background: $black;
+    color: $grey;
+    font-size: 16px;
+    line-height: 80%;
+    text-align: center;
+    height: 100%;
+    position: fixed;
+    @include breakpoint(mini) {
+        height: auto;
+    }
+    @include breakpoint(mobile) {
+        height: auto;
+    }
+    .burger {
+        display: none;
+        font-size: 30px;
+        margin: 20px auto;
+        @include breakpoint(mini) {
+        display: block;
+        }
+        @include breakpoint(mobile) {
+        display: block;
+        }
+    }
+
+}
+
+nav {
+    a {
+        display: block;
+        border-bottom: 1px solid $bordergrey;
+        padding: 20px 0;
+        width: 100%;
+         -webkit-transition: all 0.5s ease;
+    }
+    @include breakpoint(mini) {
+        display: none;
+    }
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.mobilenav {
+    .navwrap {
+        @include breakpoint(mini) {
+            background: rgba(0,0,0,0.8);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        @include breakpoint(mobile) {
+            background: rgba(0,0,0,0.8);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    }
+    @include breakpoint(mobile) {
+        nav {
+            display: block;
+        }
+    }
+        @include breakpoint(mini) {
+        nav {
+            display: block;
+        }
+    }
+}

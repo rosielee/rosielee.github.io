@@ -2499,7 +2499,20 @@ figcaption {
   vertical-align: middle; }
 
 body {
-  background-color: #e6e6e6; }
+  background-color: #e6e6e6;
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto; }
 
 .title h1 {
   font-size: 2em;
@@ -2510,6 +2523,20 @@ body {
   font-weight: 100;
   line-height: 140%;
   color: #787878; }
+
+.container {
+  margin-left: 14.28%; }
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+    .container {
+      margin-left: 25%; } }
+  @media screen and (max-width: 768px) and (min-width: 480px), screen and (max-device-width: 768px) and (min-device-width: 480px) {
+    .container {
+      margin-left: 0;
+      margin-top: 30px; } }
+  @media screen and (max-device-width: 480px), screen and (max-width: 480px) {
+    .container {
+      margin-left: 0;
+      margin-top: 30px; } }
 
 .box-item {
   background-color: white;
@@ -2536,7 +2563,7 @@ body {
 .item-instructions {
   color: #787878;
   font-style: italic;
-  font-size: .8em; }
+  font-size: .9em; }
   .item-instructions b {
     font-style: normal; }
   .item-instructions li {
@@ -2554,5 +2581,84 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center center; }
+
+.rate-wrap {
+  background-color: white; }
+  .rate-wrap li {
+    padding: 40px 30px;
+    border: solid 1px #e6e6e6; }
+  .rate-wrap b {
+    font-size: 1.5em;
+    font-weight: 100;
+    line-height: 150%;
+    color: #000000;
+    font-style: normal; }
+  .rate-wrap p {
+    color: #787878;
+    font-style: italic;
+    font-size: .9em;
+    display: inline-block; }
+  .rate-wrap a {
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    text-align: right;
+    font-size: 1.5em;
+    font-weight: 100;
+    line-height: 150%;
+    padding-right: 30px; }
+
+.navwrap {
+  background: #000000;
+  color: #e6e6e6;
+  font-size: 16px;
+  line-height: 80%;
+  text-align: center;
+  height: 100%;
+  position: fixed; }
+  @media screen and (max-width: 768px) and (min-width: 480px), screen and (max-device-width: 768px) and (min-device-width: 480px) {
+    .navwrap {
+      height: auto; } }
+  @media screen and (max-device-width: 480px), screen and (max-width: 480px) {
+    .navwrap {
+      height: auto; } }
+  .navwrap .burger {
+    display: none;
+    font-size: 30px;
+    margin: 20px auto; }
+    @media screen and (max-width: 768px) and (min-width: 480px), screen and (max-device-width: 768px) and (min-device-width: 480px) {
+      .navwrap .burger {
+        display: block; } }
+    @media screen and (max-device-width: 480px), screen and (max-width: 480px) {
+      .navwrap .burger {
+        display: block; } }
+
+nav a {
+  display: block;
+  border-bottom: 1px solid #323232;
+  padding: 20px 0;
+  width: 100%;
+  -webkit-transition: all 0.5s ease; }
+@media screen and (max-width: 768px) and (min-width: 480px), screen and (max-device-width: 768px) and (min-device-width: 480px) {
+  nav {
+    display: none; } }
+@media screen and (max-device-width: 480px), screen and (max-width: 480px) {
+  nav {
+    display: none; } }
+
+@media screen and (max-width: 768px) and (min-width: 480px), screen and (max-device-width: 768px) and (min-device-width: 480px) {
+  .mobilenav .navwrap {
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-backdrop-filter: blur(10px); } }
+@media screen and (max-device-width: 480px), screen and (max-width: 480px) {
+  .mobilenav .navwrap {
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-backdrop-filter: blur(10px); } }
+@media screen and (max-device-width: 480px), screen and (max-width: 480px) {
+  .mobilenav nav {
+    display: block; } }
+@media screen and (max-width: 768px) and (min-width: 480px), screen and (max-device-width: 768px) and (min-device-width: 480px) {
+  .mobilenav nav {
+    display: block; } }
 
 /*# sourceMappingURL=style.css.map */
