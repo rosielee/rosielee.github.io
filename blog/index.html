@@ -13,12 +13,43 @@
 
 <!-- http://dev.rosielee.github.io/blog/_materialadmin/pages/404.html -->
 
-<div id="header"></div>
-<div id="menu"></div>
+<header class="header pls prl ptm pbm bg-yellow-tint">
+    <div class="grid">
+        <div class="unit size1of2">
+            <div class="header-inner">ROSIE LEE DIGITAL BLOG</div>
+        </div>
+        <div class="unit size1of2">
+            <div class="search typo-right">
+                <input id="search" type="text">
+            </div>
+        </div>
+    </div>
+</header>
 
-<div id="404"></div>
-<div id="home"></div>
+<nav id="nav" class="nav pas">
+    <ul id="" class="v-list">
+        <li>
+            <a href="#/home">
+                <span class="title">Home</span>
+            </a>
+        </li>
+    </ul>
+</nav>
 
+<main id="content" class="main pam mlm"></main>
+
+<script id="tpl-home" type="x-tmpl">
+<section class="card mbm pas">
+    <a href="{{url}}" target="_blank">
+        <h3>{{name}}</h3>
+        <div class="card-inner">
+            <p>{{date}} - {{user}}</p>
+        </div>
+    </a>
+</section>
+</script>
+
+<script src="assets/js/lib/underscore.1-8-3.min.js"></script>
 <script src="assets/js/dist/global.js"></script>
 </body>
 </html>
