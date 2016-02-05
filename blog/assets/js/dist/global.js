@@ -40,7 +40,9 @@ var Global = (function($) {
     function events() {
 
         $(window).on('load', function() {
+
             renderEntries( allEntries );
+
         });
 
         $(document).on('keyup', '#search', function() {
