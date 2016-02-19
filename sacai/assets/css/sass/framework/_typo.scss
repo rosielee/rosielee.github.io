@@ -1,0 +1,148 @@
+html {
+	// font-family: "calibri";
+	font-family: "trade-gothic-lt-bold-cond-twenty";
+}
+
+body {
+	letter-spacing: 0.02em;
+}
+
+p {
+	letter-spacing: 0.06em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "nikeenergy-headline";
+}
+
+.underline-big,
+.underline-small {
+	position: relative;
+	margin-bottom: 60px;
+	&:after {
+		content: "";
+		position: absolute;
+		width: 160px;
+		height: 5px;
+		background-color: #000;
+		bottom: -30px;
+		left: 0;
+	}
+}
+
+.underline-big {
+	&:after {
+		width: 100%;
+	}
+}
+
+// ========================================
+// fonts style
+// ========================================
+
+.typo-uppercase {
+	text-transform: uppercase;
+}
+
+// ========================================
+// font weight
+// ========================================
+
+.typo-normal {
+	font-weight: normal;
+}
+
+.typo-bold {
+	font-weight: normal;
+}
+
+// ========================================
+// alignment
+// ========================================
+
+.typo-left {
+	text-align: left;
+}
+
+.typo-right {
+	text-align: right;
+}
+
+.typo-center {
+	text-align: center;
+}
+
+.typo-justify {
+	text-align: justify;
+}
+
+// ========================================
+// SIZES - REM
+// ========================================
+
+.f_xxl {
+	@include fontSize( 48px );
+	@include lineHeight( 54px );
+}
+
+.f_xl {
+	@include fontSize( 34px );
+	@include lineHeight( 40px );
+}
+
+.f_l {
+	@include fontSize( 20px );
+	@include lineHeight( 26px );
+}
+
+// .f_m {
+// 	@include fontSize( 24px );
+// 	@include lineHeight( 30px );
+// }
+
+.f_r {
+	@include fontSize( 14px );
+	@include lineHeight( 20px );
+}
+
+// .f_s {
+// 	@include fontSize( 14px );
+// 	@include lineHeight( 20px );
+// }
+
+// ========================================
+// SIZES - VH
+// ========================================
+
+// .f_xl {
+// 	font-size: 7vh;
+// 	line-height: 7.5vh;
+// }
+
+// .f_l {
+// 	font-size: 4vh;
+// 	line-height: 4.5vh;
+// }
+
+// .f_m {
+// 	font-size: 3.5vh;
+// 	line-height: 4vh;
+// }
+
+// .f_r {
+// 	font-size: 2.5vh;
+// 	line-height: 3vh;
+// }
+
+// .f_s {
+// 	font-size: 2vh;
+// 	line-height: 2.5vh;
+// }
+
+// ========================================
+// colours
+// ========================================
+
+.typo-white {
+	color: $white;
+}

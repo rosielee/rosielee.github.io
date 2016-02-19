@@ -1,0 +1,51 @@
+// ========================================
+// logo
+// ========================================
+
+.logo-full {
+	display: block;
+	background: url(/assets/img/logo-full.png) 0 0 / cover;
+	width: 100px;
+	height: 195px;
+}
+
+.logo-swoosh {
+	position: relative;
+	display: block;
+	// background: url(/assets/img/logo-swoosh.png) 0 0 / cover;
+	background: url(/assets/img/logo-swoosh-100x131.png);
+	width: 100px;
+	height: 130px;
+	// @include prefix( transform, translateY(-1800px) );
+	// @include prefix( transition, 600ms );
+}
+
+.logo-sacai {
+	position: relative;
+	display: block;
+	// background: url(/assets/img/logo-sacai.png) 0 0 / cover;
+	background: url(/assets/img/logo-sacai-100x25.png);
+	width: 100px;
+	height: 25px;
+	// @include prefix( transform, translateY(1800px) );
+	// @include prefix( transition, 600ms );
+}
+
+.cross {
+	display: block;
+	background: url(/assets/img/cross.png) 0 0 / cover;
+	width: 100px;
+	height: 25px;
+	margin: 10px 0 15px 0;
+}
+
+// .door {
+// 	&.closed {
+// 		.logo-swoosh {
+// 			@include prefix( transform, translateY(0) );
+// 		}
+// 		.logo-sacai {
+// 			@include prefix( transform, translateY(0) );
+// 		}
+// 	}
+// }

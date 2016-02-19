@@ -1,0 +1,18 @@
+// ========================================
+// base
+// ========================================
+
+body {
+	position: relative;
+	z-index: -1;
+}
+
+.h_full {
+	height: 100vh;
+}
+
+.vert-center {
+	position: relative;
+	top: 50%;
+	@include prefix( transform, translateY(-50%) );
+}

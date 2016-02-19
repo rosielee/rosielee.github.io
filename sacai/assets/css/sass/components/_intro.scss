@@ -1,0 +1,27 @@
+// ========================================
+// intro
+// ========================================
+
+.intro {
+	position: fixed;
+}
+
+.intro__inner {
+	position: relative;
+	background-color: $white;
+	z-index: 1;
+}
+
+.intro__inner-description {
+	top: -100vh;
+	background-color: rgba($white, 0);
+	z-index: 0;
+	& > div {
+		@include prefix( transform, translateY(-100%) );
+		position: relative;
+		top: 50%;
+		width: 100%;
+		padding: 0 25%;
+		text-align: center;
+	}
+}

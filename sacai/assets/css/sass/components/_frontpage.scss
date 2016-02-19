@@ -1,0 +1,36 @@
+// ========================================
+// door
+// ========================================
+
+// .door { display: none; }
+
+.door {
+	font-size: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+	&.closed {
+		.panel__right {
+			@include prefix( transform, translateX(100%) );
+		}
+		.panel__left {
+			@include prefix( transform, translateX(-90%) );
+		}
+	}
+}
+
+.panel {
+	display: inline-block;
+	width: 50%;
+	height: 100vh;
+	position: relative;
+	// @include prefix( transition, 1000ms );
+}
+
+.door-open {
+	display: block;
+	height: 25px;
+	width: 56px;
+	margin-bottom: 10vh;
+	background: url(/assets/img/arrow-black.png);
+}
