@@ -2500,15 +2500,11 @@ figcaption {
 
 body {
   background-color: #e6e6e6;
-  /* These are technically the same, but use both */
   overflow-wrap: break-word;
   word-wrap: break-word;
   -ms-word-break: break-all;
-  /* This is the dangerous one in WebKit, as it breaks things wherever */
   word-break: break-all;
-  /* Instead use this non-standard one: */
   word-break: break-word;
-  /* Adds a hyphen where the word breaks, if supported (No Blink) */
   -ms-hyphens: auto;
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
@@ -2641,8 +2637,7 @@ nav a {
   -webkit-transition: all 0.5s ease; }
 nav :hover {
   color: #0076a3;
-  border-bottom: 1px solid #0076a3;
-  width: 90%; }
+  border-bottom-color: #0076a3; }
 @media screen and (max-width: 768px) and (min-width: 480px), screen and (max-device-width: 768px) and (min-device-width: 480px) {
   nav {
     display: none; } }

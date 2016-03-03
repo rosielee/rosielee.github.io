@@ -41,8 +41,8 @@ nav {
     }
     :hover {
         color: $blue;
-        border-bottom: 1px solid $blue;
-        width: 90%;
+        border-bottom-color: $blue;
+        // width: 90%;
     }
 
     @include breakpoint(mini) {
